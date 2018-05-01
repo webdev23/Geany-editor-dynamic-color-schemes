@@ -4,6 +4,8 @@ A visual way to style Geany.
 
 Generate up to <b>1823951250</b> unique Geany color schemes! <b>*</b>
 
+Will you find yours?
+
 ![gif1525132592_optimized](https://user-images.githubusercontent.com/2503337/39456700-d10baef0-4ce8-11e8-9a0b-5d919e98da43.gif)
 
 To run:
