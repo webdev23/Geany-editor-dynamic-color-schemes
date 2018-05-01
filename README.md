@@ -2,7 +2,7 @@
 
 A visual way to style Geany. 
 
-Generate up to <b>1823951250</b> unique Geany color schemes! <b>*</b>
+Generate up to <b>18,239,512,500</b> unique Geany color schemes! <b>*</b>
 
 Will you find yours?
 
@@ -24,4 +24,5 @@ This tool require `php`, `wmctrl`, `xdotool` on the system.
 
 <a href="https://github.com/geany/geany/issues/1849">Beginning of the story</a>
 
-* (R)255 * (G)255 * (B)255 * (Scheme)55 * (background/foreground)2
+* (R)255 * (G)255 * (B)255 * (Scheme)55 * (background/foreground)2 = 18,239,512,500
+* Generate a unique theme each second would take 579 years, 49 weeks, 6 days, 11 hours, 15 minutes.
