@@ -1,6 +1,6 @@
 # Geany-editor-dynamic-color-schemes
 
-![gif1525132592_optimized](https://user-images.githubusercontent.com/2503337/39455878-2ba7b2b0-4ce3-11e8-82f0-15b0c424ccdb.gif)
+![gif1525132592_optimized](https://user-images.githubusercontent.com/2503337/39456700-d10baef0-4ce8-11e8-9a0b-5d919e98da43.gif)
 
 To run:
 
