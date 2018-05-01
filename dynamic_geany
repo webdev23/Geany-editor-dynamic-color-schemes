@@ -1,0 +1,78 @@
+#!/usr/bin/php
+<?php
+$path = getcwd()."/";
+
+echo "Dynamic theming for Geany!\n";
+
+$conf = file_get_contents("https://webdev23.github.io/Geany-editor-dynamic-color-schemes/filetypes.xml");
+$front = file_get_contents("https://webdev23.github.io/Geany-editor-dynamic-color-schemes/index.php");
+
+file_put_contents("$path/.config/geany/filedefs/filetypes.xml",$conf);
+
+
+$flex = <<<'EOF'
+<?php
+$path = getcwd()."/";
+
+function confColors($fileName, $str) {
+    $lines = file($fileName);
+    foreach ($lines as $lineNumber => $line) {
+        if (strpos($line, $str) !== false) {
+            $line = explode("=",$line)[1];
+            $color1 = substr(explode(";",$line)[0],2);
+            $color2 = substr(explode(";",$line)[1],2);
+            echo $color1." ".$color2;
+        }
+    }
+    return -1;
+}
+
+function line($fileName, $str) {
+    $lines = file($fileName);
+    foreach ($lines as $lineNumber => $line) {
+        if (strpos($line, $str) !== false) {
+            return $lineNumber;
+        }
+    }
+    return -1;
+}
+
+function lineEdit($file_name, $line, $new_value){
+  $file = explode("\n", rtrim(file_get_contents($file_name)));
+  $file[$line] = $new_value;
+  $file = implode("\n", $file);
+  file_put_contents($file_name, $file);
+}
+
+if ($_GET["current"] != ""){
+  $target = "$path/.config/geany/filedefs/filetypes.xml";
+  $lookup = $_GET["current"];
+  confColors($target, $lookup);
+  exit;
+}
+
+if ($_GET["set"] != ""){
+  @ob_end_clean;
+  @ob_start;
+  $target = "$path/.config/geany/filedefs/filetypes.xml";
+  $set = $_GET["set"];
+  $color1 = @$_GET["color1"];
+  $color2 = @$_GET["color2"];
+  $old = line($target,"$set");
+  $newLine = "$set=0x".$color1.";0x".$color2.";false;false";
+  $new = lineEdit($target, $old, $newLine);
+  echo $newLine;
+  usleep(10000);
+  system("wmctrl -xa Geany && xdotool key F2 alt+t KP_Enter");
+  exit;
+}
+?>
+
+EOF;
+
+file_put_contents("$path/.config/geany/filedefs/front.php",$flex.$front);
+
+system("xdg-open http://localhost:6363");
+
+system("php -S localhost:6363 $path/.config/geany/filedefs/front.php &");
+
