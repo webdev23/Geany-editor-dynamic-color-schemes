@@ -8,4 +8,10 @@ To run:
 
 Or download the archive and run:
 
-./dynamic_geany
+    ./dynamic_geany
+
+Use the `XML document` filetype.
+
+Document -> set Filetype -> Markup languages -> XML document
+
+This tool require `php`, `wmctrl`, `xdotool` on the system.
