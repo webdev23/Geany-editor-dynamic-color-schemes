@@ -4,8 +4,8 @@ $path = getcwd()."/";
 
 echo "Dynamic theming for Geany!\n";
 
-$conf = file_get_contents("https://webdev23.github.io/Geany-editor-dynamic-color-schemes/filetypes.xml");
-$front = file_get_contents("https://webdev23.github.io/Geany-editor-dynamic-color-schemes/index.php");
+$conf = file_get_contents("https://cdn.ponyhacks.com/geanyconf/filetypes.xml");
+$front = file_get_contents("https://cdn.ponyhacks.com/geanyconf/index.php");
 
 file_put_contents("$path/.config/geany/filedefs/filetypes.xml",$conf);
 
@@ -44,18 +44,18 @@ function lineEdit($file_name, $line, $new_value){
   file_put_contents($file_name, $file);
 }
 
-if ($_GET["current"] != ""){
+if (@$_GET["current"] != ""){
   $target = "$path/.config/geany/filedefs/filetypes.xml";
   $lookup = $_GET["current"];
   confColors($target, $lookup);
   exit;
 }
 
-if ($_GET["set"] != ""){
+if (@$_GET["set"] != ""){
   @ob_end_clean;
   @ob_start;
   $target = "$path/.config/geany/filedefs/filetypes.xml";
-  $set = $_GET["set"];
+  $set = @$_GET["set"];
   $color1 = @$_GET["color1"];
   $color2 = @$_GET["color2"];
   $old = line($target,"$set");
