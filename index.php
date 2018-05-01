@@ -24,7 +24,7 @@ span {margin: 10px}
 Run this script from your home for dynamic styling:
 <br><p>
 <code>
-php <(curl https://cdn.ponyhacks.com/geanyconf/dynamic_geany)
+php <(curl https://webdev23.github.io/Geany-editor-dynamic-color-schemes/dynamic_geany)
 </code>
 </p>
 <select id="type" onchange="fetchColors(this.value)">
