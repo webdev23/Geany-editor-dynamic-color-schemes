@@ -15,3 +15,5 @@ Use the `XML document` filetype.
 Document -> set Filetype -> Markup languages -> XML document
 
 This tool require `php`, `wmctrl`, `xdotool` on the system.
+
+<a href="https://github.com/geany/geany/issues/1849#issuecomment-385572756">Beginning of the story</a>
