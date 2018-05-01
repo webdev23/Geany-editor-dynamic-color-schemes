@@ -4,11 +4,13 @@ $path = getcwd()."/";
 
 echo "Dynamic theming for Geany!\n";
 
-$conf = file_get_contents("https://cdn.ponyhacks.com/geanyconf/filetypes.xml");
-$front = file_get_contents("https://cdn.ponyhacks.com/geanyconf/index.php");
+$conf = file_get_contents("https://webdev23.github.io/Geany-editor-dynamic-color-schemes/filetypes.xml");
+$front = file_get_contents("https://webdev23.github.io/Geany-editor-dynamic-color-schemes/index.php");
 
-file_put_contents("$path/.config/geany/filedefs/filetypes.xml",$conf);
-
+if (!file_exists("$path/.config/geany/filedefs/filetypes.xml")){
+  file_put_contents("$path/.config/geany/filedefs/filetypes.xml",$conf);
+}
+else { echo "Found config file"; }
 
 $flex = <<<'EOF'
 <?php
@@ -46,7 +48,7 @@ function lineEdit($file_name, $line, $new_value){
 
 if (@$_GET["current"] != ""){
   $target = "$path/.config/geany/filedefs/filetypes.xml";
-  $lookup = $_GET["current"];
+  $lookup = @$_GET["current"];
   confColors($target, $lookup);
   exit;
 }
