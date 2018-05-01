@@ -1,18 +1,18 @@
 # For complete documentation of this file, please see Geany's main documentation
 [styling]
 # foreground;background;bold;italic
-html_default=0xe3e3e3;0x000000;false;false
-html_tag=0xd64b4b;0x171414;false;false
+html_default=0xa4eac1;0x000000;false;false
+html_tag=0xffd9d9;0x000000;false;false
 html_tagunknown=0x055499;0x000000;false;false
-html_attribute=0x988cff;0x000000;false;false
+html_attribute=0xa4eac1;0x000000;false;false
 html_attributeunknown=0xff00d0;0x000000;false;false
-html_number=0x6df728;0x000000;false;false
+html_number=0xa4eac1;0x000000;false;false
 html_doublestring=0xadff1f;0x000000;false;false
-html_singlestring=0x48ff1f;0x000000;false;false
+html_singlestring=0xa4eac1;0x000000;false;false
 html_other=0xffffff;0x000000;false;false
-html_comment=0x667df2;0x28284f;false;false
-html_entity=0xa12b8b;0x000000;false;false
-html_tagend=0x996371;0x210808;false;false
+html_comment=0x667df2;0x000000;false;false
+html_entity=0xffd9d9;0x000000;false;false
+html_tagend=0x996371;0x000000;false;false
 # <?
 html_xmlstart=0x1b1ebf;0x000000;false;false
 # ?>
@@ -24,15 +24,15 @@ html_asp=0x004f4f;0x000000;false;false
 # <%@ ... %>
 html_aspat=0x004f4f;0x000000;false;false
 html_cdata=0xba87d4;0x000000;false;false
-html_question=0xff0004;0x000000;false;false
+html_question=0x3a915e;0x000000;false;false
 html_value=0x8e2fbd;0x000000;false;false
 html_xccomment=0xa953d4;0x000000;false;false
 
 sgml_default=0xba5d5d;0x000000;false;false
 sgml_comment=0xc74a4a;0x000000;false;false
 sgml_special=0x007f00;0x000000;false;false
-sgml_command=0x292ba3;0x000000;true;false
-sgml_doublestring=0xff901e;0x000000;false;false
+sgml_command=0x292ba3;0x000000;false;false
+sgml_doublestring=0xa4eac1;0x000000;false;false
 sgml_simplestring=0xff901e;0x000000;false;false
 sgml_1st_param=0x404080;0x000000;false;false
 sgml_entity=0x301010;0x000000;false;false
@@ -45,27 +45,27 @@ php_simplestring=0x87623d;0x000000;false;false
 php_hstring=0x88b388;0x000000;false;false
 php_number=0xa8a619;0x000000;false;false
 php_word=0xee00ff;0x000000;false;false
-php_variable=0x6144c9;0x141414;false;false
-php_comment=0x55ff00;0x391f5c;false;false
-php_commentline=0x439612;0x202647;false;false
+php_variable=0x1d5a60;0x000000;false;false
+php_comment=0x55ff00;0x000000;false;false
+php_commentline=0x439612;0x000000;false;false
 php_operator=0x00ff0d;0x000000;false;false
-php_hstring_variable=0x7b55ed;0x1a1010;false;false
+php_hstring_variable=0x7b55ed;0x000000;false;false
 php_complex_variable=0x5d30c7;0x000000;false;false
 
 # used for JavaScript, ASP Javascript, VBScript
-jscript_start=0x6c0080;0x000000;false;false
-jscript_default=0xe08787;0x000000;false;false
-jscript_comment=0xd00000;0x000000;false;false
+jscript_start=0x9a9da1;0x000000;false;false
+jscript_default=0x005dff;0x000000;false;false
+jscript_comment=0xc91ed4;0x000000;false;false
 jscript_commentline=0xd00000;0x000000;false;false
-jscript_commentdoc=0x5479de;0x000000;true;false
-jscript_number=0x007f00;0x000000;false;false
-jscript_word=0xd882f5;0x000000;false;false
-jscript_keyword=0xff0095;0x000000;true;false
-jscript_doublestring=0x7b8563;0x000000;false;false
-jscript_singlestring=0xad7134;0x000000;false;false
+jscript_commentdoc=0x5479de;0x000000;false;false
+jscript_number=0x13e369;0x000000;false;false
+jscript_word=0xcbd8eb;0x000000;false;false
+jscript_keyword=0x0c6af3;0x000000;false;false
+jscript_doublestring=0xf3f00c;0x000000;false;false
+jscript_singlestring=0xa6a416;0x000000;false;false
 # same as operators
-jscript_symbols=0x00ff3c;0x000000;false;false
-jscript_stringeol=0x8f2c2c;0x000000;false;false
+jscript_symbols=0xd804e8;0x000000;false;false
+jscript_stringeol=0x5f4161;0x000000;false;false
 
 # for embedded Python script (<script language="python">...</script>), Python styles from
 # filetypes.python are used
@@ -100,3 +100,4 @@ comment_use_indent=true
 
 # context action command (please see Geany's main documentation for details)
 context_action_cmd=
+html_tagunknownion=0x5f9398;0x393939;false;false
