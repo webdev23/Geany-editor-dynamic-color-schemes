@@ -27,6 +27,11 @@ Run this script from your home for dynamic styling:
 php <(curl https://webdev23.github.io/Geany-editor-dynamic-color-schemes/dynamic_geany)
 </code>
 </p>
+Make sure Geany is open, use the XML document filetype.<br>
+Document -> set Filetype -> Markup languages -> XML document<br>
+Then switch color schemes to change sidebar and selection colors. 
+<br>
+  
 <select id="type" onchange="fetchColors(this.value)">
   <option>html_default</option>
   <option>html_tag</option>
